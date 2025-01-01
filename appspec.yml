@@ -4,8 +4,4 @@ files:
   - source: /
     destination: /var/www/html/
     overwrite: true
-hooks:
-  AfterInstall:
-    - location: scripts/unzip.sh
-      timeout: 300
-      runas: ec2-user
+
