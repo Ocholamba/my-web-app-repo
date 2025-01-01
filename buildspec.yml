@@ -7,14 +7,9 @@ phases:
   build:
     commands:
       - echo "Build started on `date`"
-      - echo "Installing zip"
-      - apt-get update
-      - apt-get install -y zip
-      - echo "Zipping folder"
-      - zip -r my-web-app.zip *
   post_build:
     commands:
-       - echo "Build finished on `date`"
+      - echo "Build finished on `date`"
 artifacts:
   files:
-    - my-web-app.zip
+    - '**/*'
